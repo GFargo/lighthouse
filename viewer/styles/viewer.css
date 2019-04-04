@@ -18,13 +18,14 @@
 .lh-vars {
   --text-font-family: Roboto, Helvetica, Arial, sans-serif;
   --monospace-font-family: 'Menlo', 'dejavu sans mono', 'Consolas', 'Lucida Console', monospace;
+  --header-font-family: Frank Ruhl Libre, serif;
   --body-background-color: #fff;
   --body-font-size: 14px;
   --body-line-height: 18px;
   --subheader-font-size: 14px;
   --subheader-line-height: 20px;
-  --subheader-color: hsl(206, 6%, 25%);
-  --header-bg-color: #f1f3f4;
+  --subheader-color: #393d43;
+  --header-bg-color: #e3423b;
   --header-font-size: 20px;
   --header-line-height: 24px;
   --title-font-size: 24px;
@@ -39,9 +40,12 @@
   --audit-indent: 16px;
   --text-indent: 8px;
   --expandable-indent: 20px;
+  --primary-light-text-color: #fff;
   --secondary-text-color: #565656;
+  --secondary-light-text-color: #fcfcfc;
+  --footer-bg-color: #393d43;
   /*--accent-color: #3879d9;*/
-  --fail-color: hsl(1, 73%, 45%);
+  --fail-color: #e3423b;
   --average-color: hsl(31, 100%, 45%); /* md orange 800 */
   --pass-color: hsl(139, 70%, 30%);
   --informative-color: #0c50c7;
@@ -58,7 +62,7 @@
   /* Edge doesn't support calc(var(calc())) */
   --report-width-half: calc(30 * var(--body-font-size));
   --report-header-height: 161px;
-  --report-header-color: #202124;
+  --report-header-color: #fff;
   --navitem-font-size: var(--body-font-size);
   --navitem-line-height: var(--body-line-height);
   --navitem-hpadding: var(--body-font-size);
@@ -801,7 +805,9 @@
 }
 
 .lh-scores-header .lh-gauge--pwa__wrapper {
-  border-left: 1px solid var(--report-secondary-border-color)
+  border-left: 1px solid var(--report-secondary-border-color);
+  /* Can remove when this bug is resolved: https://bugs.chromium.org/p/chromium/issues/detail?id=942097 */
+  will-change: transform;
 }
 
 .lh-scorescale {
@@ -1169,7 +1175,8 @@
 }
 .drop_zone.dropping::after {
   content: 'Drop report here';
-  border: 2px dashed currentColor;
+  color: var(--secondary-light-text-color);
+  border: 2px dashed rgba(255,255,255,0.75);
   border-radius: 5px;
   padding: 25px;
   width: 33vw;
@@ -1178,15 +1185,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--header-bg-color);
 }
 .viewer-placeholder {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #555;
+  color: var(--secondary-light-text-color);
   font-weight: 300;
+  background-color: var(--header-bg-color);
+  background-image: url('../images/jumbotron.png');
+  background-size: 50%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
 .viewer-placeholder-inner {
   display: flex;
@@ -1194,9 +1206,9 @@
   border-radius: 5px;
   padding: 16px;
   max-width: 80vw;
-  border: 2px dashed rgba(0,0,0,0.2);
+  border: 2px dashed rgba(255,255,255,0.75);
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--header-bg-color);
 }
 .viewer-placeholder-inner.dropping {
   border-color: currentColor;

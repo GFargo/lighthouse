@@ -18,13 +18,14 @@
 .lh-vars {
   --text-font-family: Roboto, Helvetica, Arial, sans-serif;
   --monospace-font-family: 'Menlo', 'dejavu sans mono', 'Consolas', 'Lucida Console', monospace;
+  --header-font-family: Frank Ruhl Libre, serif;
   --body-background-color: #fff;
   --body-font-size: 14px;
   --body-line-height: 18px;
   --subheader-font-size: 14px;
   --subheader-line-height: 20px;
-  --subheader-color: hsl(206, 6%, 25%);
-  --header-bg-color: #f1f3f4;
+  --subheader-color: #393d43;
+  --header-bg-color: #e3423b;
   --header-font-size: 20px;
   --header-line-height: 24px;
   --title-font-size: 24px;
@@ -39,9 +40,12 @@
   --audit-indent: 16px;
   --text-indent: 8px;
   --expandable-indent: 20px;
+  --primary-light-text-color: #fff;
   --secondary-text-color: #565656;
+  --secondary-light-text-color: #fcfcfc;
+  --footer-bg-color: #393d43;
   /*--accent-color: #3879d9;*/
-  --fail-color: hsl(1, 73%, 45%);
+  --fail-color: #e3423b;
   --average-color: hsl(31, 100%, 45%); /* md orange 800 */
   --pass-color: hsl(139, 70%, 30%);
   --informative-color: #0c50c7;
@@ -58,7 +62,7 @@
   /* Edge doesn't support calc(var(calc())) */
   --report-width-half: calc(30 * var(--body-font-size));
   --report-header-height: 161px;
-  --report-header-color: #202124;
+  --report-header-color: #fff;
   --navitem-font-size: var(--body-font-size);
   --navitem-line-height: var(--body-line-height);
   --navitem-hpadding: var(--body-font-size);

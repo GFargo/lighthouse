@@ -31,7 +31,8 @@
 }
 .drop_zone.dropping::after {
   content: 'Drop report here';
-  border: 2px dashed currentColor;
+  color: var(--secondary-light-text-color);
+  border: 2px dashed rgba(255,255,255,0.75);
   border-radius: 5px;
   padding: 25px;
   width: 33vw;
@@ -40,15 +41,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--header-bg-color);
 }
 .viewer-placeholder {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #555;
+  color: var(--secondary-light-text-color);
   font-weight: 300;
+  background-color: var(--header-bg-color);
+  background-image: url('../images/jumbotron.png');
+  background-size: 50%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
 .viewer-placeholder-inner {
   display: flex;
@@ -56,9 +62,9 @@
   border-radius: 5px;
   padding: 16px;
   max-width: 80vw;
-  border: 2px dashed rgba(0,0,0,0.2);
+  border: 2px dashed rgba(255,255,255,0.75);
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--header-bg-color);
 }
 .viewer-placeholder-inner.dropping {
   border-color: currentColor;
